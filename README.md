@@ -71,6 +71,15 @@ python notepad_macro.py
 ![GhostWriter Demo](./assets/demo.gif)
 ```
 
+### 데모 GIF 빠른 제작 가이드
+
+1. `Win + G`로 Xbox Game Bar를 열고 화면 녹화를 시작합니다.
+2. 메모장 입력 시나리오(원문 작성 -> 대상 창 포커스 -> `Ctrl + Shift + H`)를 5~10초 분량으로 녹화합니다.
+3. 녹화 파일을 GIF로 변환해 `assets/demo.gif`로 저장합니다.
+4. 저장소에 `assets/demo.gif`를 커밋하면 README에서 바로 미리보기가 표시됩니다.
+
+권장: GIF 용량은 8MB 이하로 유지하면 GitHub 페이지 로딩이 빠릅니다.
+
 ## 테스트
 
 ```bash
