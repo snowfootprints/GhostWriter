@@ -1,7 +1,18 @@
 # GhostWriter
 
+[![Windows](https://img.shields.io/badge/OS-Windows%2010%2F11-0078D6?logo=windows&logoColor=white)](https://www.microsoft.com/windows)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Test](https://img.shields.io/badge/Test-pytest-0A9EDC?logo=pytest&logoColor=white)](https://docs.pytest.org/)
+[![Status](https://img.shields.io/badge/Project-Active-2EA043)](https://github.com/snowfootprints/GhostWriter)
+
 윈도우 메모장(Notepad)의 텍스트를 읽어 현재 커서 위치에 사람처럼 타이핑해주는 자동 입력 매크로입니다.  
 시스템 트레이에서 실행되며, 단축키 `Ctrl + Shift + H` 한 번으로 동작합니다.
+
+## 실행 흐름
+
+1. `GhostWriter`를 실행하면 시스템 트레이에 상주합니다.
+2. 가장 최근 메모장 창을 찾아 텍스트를 읽습니다.
+3. 현재 활성 입력창에 유니코드(한글 포함)로 자연스럽게 타이핑합니다.
 
 ## 주요 기능
 
@@ -37,6 +48,8 @@ GhostWriter/
 ### 1) 개발 환경 실행
 
 ```bash
+python -m venv .venv
+.venv\Scripts\activate
 pip install -r requirements.txt
 python notepad_macro.py
 ```
@@ -48,6 +61,15 @@ python notepad_macro.py
 1. 메모장에 원하는 원문을 작성합니다.
 2. 텍스트를 입력할 대상 창(채팅, 문서, 폼 등)에 커서를 둡니다.
 3. `Ctrl + Shift + H`를 누르면 메모장 내용을 자동 입력합니다.
+
+## 데모 / 스크린샷
+
+- 데모 GIF를 추가하려면 `assets/demo.gif` 파일을 커밋한 뒤 아래 링크를 활성화하세요.
+- 예시:
+
+```md
+![GhostWriter Demo](./assets/demo.gif)
+```
 
 ## 테스트
 
@@ -69,6 +91,11 @@ pyinstaller GhostWriterMacro.spec
 ```
 
 빌드 결과물은 `dist/` 폴더에 생성됩니다.
+
+## 배포 팁
+
+- `dist/GhostWriterMacro/` 폴더 전체를 함께 배포하세요.
+- 단일 `.exe`만 전달하면 누락 DLL로 실행 실패할 수 있습니다.
 
 ## 문제 해결
 
