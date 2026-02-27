@@ -1,0 +1,41 @@
+GhostWriter Macro - Help
+========================
+
+Overview
+- This program runs in the system tray and listens for Ctrl+Shift+H.
+- It reads text from the most recent Notepad window and types it into the current input field.
+
+How to Run
+1. Double-click GhostWriterMacro.exe.
+2. Confirm the tray icon appears.
+3. Press Ctrl+Shift+H where you want to type.
+4. Right-click tray icon -> "프로그램 종료" to exit.
+
+Requirements
+- Windows 10/11 (64-bit recommended)
+- Some systems may require "Run as Administrator" for global hotkey behavior.
+
+What Is Included
+- GhostWriterMacro.exe : Main executable
+- HELP.txt             : This help file
+
+Troubleshooting
+- If Ctrl+Shift+H does not trigger:
+  1) Run the executable as Administrator.
+  2) Close and restart the app.
+  3) Test with tray menu: "지금 실행 (테스트)".
+- If it cannot read Notepad text:
+  1) Ensure the source window is real Notepad (`notepad.exe`).
+  2) Try classic Notepad and Windows 11 Store Notepad separately.
+  3) Confirm focus switching is allowed by your security policy.
+- If security software blocks execution:
+  1) Add app folder to allowlist.
+  2) Re-download from your trusted source.
+
+Logging
+- Runtime errors are printed with Python logging as `[ERROR] ...`.
+- Informational flow is printed as `[INFO] ...` (startup/hotkey/shutdown).
+
+Distribution Tip
+- Share the entire folder output from dist\GhostWriterMacro\.
+- Do not send only the .exe without required bundled files.
